@@ -1,0 +1,63 @@
+Exercises:
+
+1. What is a hash table?
+
+-A type of data structure that stores each value by linking it to a key, forming key-value pairs, just like JavaScript objects.
+
+2. What is hashing?
+
+-The conversion from a string to a numerical index.
+
+3. How does a hash table store data?
+
+-Takes a key which can be any data type. The key is converted to a integer(hash code) operated by a hash function. Calculates a true index by modding the key to its capacity. Store the value in the calculated array bin
+
+4. How are hash tables and objects different?
+
+-If your data is a static number of distinct values of different types, then an object is the optimal choice. Use a hash table when your data contains a variable number of consistently formatted values, each with an identifier.
+
+5. Determine whether you would use a hash table or an object to store each of the following pieces of data:
+-A list of pets and their unique names.
+
+hash table
+
+-The name, age, and the birthday of your best friend.
+
+object
+
+-The name and location of every company in a given city.
+
+hash table
+
+-All of the books checked out from a library by a particular individual.
+
+hash table
+
+-The primary and secondary phone numbers for a contact.
+
+hash table
+
+6.Build a system that allows a sales associate to enter a customer's name, address, and phone number into the system and look up customers using their phone numbers. Store this information in a hash table.
+
+var phoneNumber = new HashTable();
+  phoneNumber.add('6262890000', {Name: 'Sara Kang', Address: '2345 Bush St'});
+  phoneNumber.add('6263451288', {Name: 'Paul Kang', Address: '167 Prospect Ave'});
+  phoneNumber.lookup('6262890000')
+
+7.Build a system that allows a store owner to track their store's inventory using a hash table for storage.
+
+var inventory = new HashTable();
+  inventory.add('534', {Name: 'Ibuprofen', Price:'4.00'});
+  inventory.add('535, {Name: 'Acetaminophen', Price:'4.00'});
+  inventory.lookup('534')
+
+8. Build a system that allows digital copies of newspapers to be entered and searched by publisher and publication date. Use hash tables to store the necessary data.
+
+let newsPaper = new HashTable();
+
+  newsPaper.add('SF Chronicle 01/20/19', {Title: 'Thousands rally for justice at Women’s March in SF', Link: 'https://www.sfchronicle.com/politics/article/Thousands-rally-for-rights-at-Women-s-March-in-13547251.php'});
+
+  newsPaper.add('Los Angeles Times 01/19/19', {Title: 'On the Texas-Mexico border: Crisis? What crisis?', Published: '6:05 PM, January 19, 2019', Link: 'https://www.latimes.com/nation/la-na-texas-border-trump-crisis-20190119-story.html'});
+
+  console.log(news.lookup("SF Chronicle 01/20/19"));
+  console.log(news.lookup("Los Angeles Times 01/19/19"));
